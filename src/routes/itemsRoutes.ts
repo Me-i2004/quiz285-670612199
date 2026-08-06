@@ -26,6 +26,9 @@ router.get("",(req: Request, res: Response) => {
 
 // POST /api/vXXX/items/:userId, body = {new item data}
 // add a new Item for userId
+const new_item = zItemPutBody;
+items.push(new_item);
+
 router.post("/",async (req: Request, res: Response) => {
   
   res.status(201).json({
