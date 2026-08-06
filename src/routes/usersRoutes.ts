@@ -11,8 +11,20 @@ import { authenticateToken } from "../middlewares/authenMiddleware.ts";
 
 // import database
 import { users } from "../db/db.ts";
+import 
 
 const router = Router();
+//Get /studentInfo
+router.get("/studentInfo", (req: Request, res: Response) => {
+ 
+      return res.json({
+        success: true,
+        message: "Student Information",
+        data: studentInfo,
+      });
+    });
+
+    
 
 // POST /api/vXXX/auth/login
 router.post("/login", (req: Request, res: Response) => {
